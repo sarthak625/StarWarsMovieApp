@@ -11,13 +11,15 @@
     <div  id="posters-wrapper" class="content-padding clearfix">
       <% movies.forEach(function(movie){ %>
         <div class="poster">
-            <img src="/images/<%= movie.poster %>" class="img-responsive">
 
-            <div class="poster-info-overlay">
-              <h3><%= movie.title %></h3>
-              <h4>View More <i class="fa fa-arrow-right"></i></h4>
-            </div>
+          <a href="/star_wars_episode/<%= movie.episode_number %>">
+              <img src="/images/<%= movie.poster %>" class="img-responsive">
 
+              <div class="poster-info-overlay">
+                <h3><%= movie.title %></h3>
+                <h4>View More <i class="fa fa-arrow-right"></i></h4>
+              </div>
+          </a> 
         </div>
 
       <% }); %>
