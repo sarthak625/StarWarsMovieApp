@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+    <% movies.forEach(function(movie){ %>
+      <img src="/images/<%= movie.poster %>" class="img-responsive">
+    <% }); %>
+
+
+    <% include partials/script %>
+  </body>
+</html>
