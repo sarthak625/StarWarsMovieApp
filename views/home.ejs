@@ -4,6 +4,9 @@
     <% include partials/head %>
   </head>
   <body>
+    <div id="hero-image">
+      <h1 id ="her-title"><%= title %></h1>  
+    </div>
     <% movies.forEach(function(movie){ %>
       <img src="/images/<%= movie.poster %>" class="img-responsive">
     <% }); %>
