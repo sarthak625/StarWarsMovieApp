@@ -4,12 +4,19 @@
     <% include partials/head %>
   </head>
   <body>
+    <% include partials/header %>
     <div id="hero-image">
-      <h1 id ="her-title"><%= title %></h1>  
+      <h1 id ="hero-title"><%= title %></h1>
     </div>
-    <% movies.forEach(function(movie){ %>
-      <img src="/images/<%= movie.poster %>" class="img-responsive">
-    <% }); %>
+    <div  id="posters-wrapper" class="content-padding clearfix">
+      <% movies.forEach(function(movie){ %>
+        <div class="poster">
+            <img src="/images/<%= movie.poster %>" class="img-responsive">
+        </div>
+
+      <% }); %>
+    </div>
+
 
 
     <% include partials/script %>
