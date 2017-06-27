@@ -17,6 +17,4 @@ app.get('/star_wars_episode/:episode_number?',routes.movie_single);
 //Not found
 app.get('*',routes.notFound);
 
-app.listen(3000,function(){
-  console.log("Server started at localhost:3000");
-});
+app.listen(process.env.PORT || 3000);
